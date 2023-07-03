@@ -7,9 +7,12 @@
       <a href="https://blog.lunaa.me">blog.lunaa.me</a>!
     </p>
     <script>
+      let oldUrl = window.location.href;
       let oldDomain = "arzg.github.io";
       let newDomain = "blog.lunaa.me";
-      let oldUrl = window.location.href;
+      if (oldUrl.includes("/lang")) {
+        newDomain = "lunacookies.github.io";
+      }
       let newUrl = oldUrl.replace(oldDomain, newDomain);
       window.location.replace(newUrl);
     </script>
